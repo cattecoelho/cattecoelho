@@ -1,0 +1,129 @@
+backend:
+  name: github
+  repo: aleksssc/NOME_DO_REPOSITORIO
+  branch: main
+
+media_folder: "assets/gallery"
+public_folder: "/assets/gallery"
+
+collections:
+
+  - label: "Conteúdo do Site"
+    name: "site_content"
+
+    files:
+
+      - name: "books"
+        label: "Livros Publicados"
+        file: "content/books.json"
+        format: "json"
+
+        fields:
+
+          - name: "books"
+            label: "Lista de Livros"
+            widget: "list"
+            summary: "{{fields.title_pt}}"
+
+            fields:
+
+              - name: "visible"
+                label: "Mostrar no site"
+                widget: "boolean"
+                default: true
+
+              - name: "title_pt"
+                label: "Título em português"
+                widget: "string"
+
+              - name: "title_en"
+                label: "Título em inglês"
+                widget: "string"
+
+              - name: "description_pt"
+                label: "Descrição em português"
+                widget: "text"
+
+              - name: "description_en"
+                label: "Descrição em inglês"
+                widget: "text"
+
+              - name: "cover"
+                label: "Capa"
+                widget: "image"
+
+              - name: "alt_pt"
+                label: "Descrição da capa em português"
+                widget: "string"
+                required: false
+
+              - name: "alt_en"
+                label: "Descrição da capa em inglês"
+                widget: "string"
+                required: false
+
+              - name: "link"
+                label: "Ligação para comprar ou saber mais"
+                widget: "string"
+                hint: "Cole aqui o endereço completo da Amazon, editora ou loja."
+
+      - label: "Eventos"
+        name: "events"
+        file: "content/events.json"
+        format: "json"
+
+        fields:
+
+          - label: "Eventos"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.displayDate}} — {{fields.title}}"
+
+            fields:
+
+              - label: "Data apresentada"
+                name: "displayDate"
+                widget: "string"
+                hint: "Exemplo: 14 JUL"
+
+              - label: "Data do evento"
+                name: "date"
+                widget: "datetime"
+                date_format: "DD/MM/YYYY"
+                time_format: false
+                format: "YYYY-MM-DD"
+
+              - label: "Título"
+                name: "title"
+                widget: "string"
+
+              - label: "Local"
+                name: "location"
+                widget: "string"
+
+              - label: "Descrição"
+                name: "description"
+                widget: "text"
+
+
+      - label: "Galeria"
+        name: "gallery"
+        file: "content/gallery.json"
+        format: "json"
+
+        fields:
+
+          - label: "Fotografias"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.alt}}"
+
+            fields:
+
+              - label: "Fotografia"
+                name: "image"
+                widget: "image"
+
+              - label: "Descrição da fotografia"
+                name: "alt"
+                widget: "string"

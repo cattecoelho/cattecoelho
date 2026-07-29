@@ -1,0 +1,25 @@
+{
+    "events": [
+        {
+            "date": "2026-07-14",
+            "displayDate": "14 JUL",
+            "title": "Sessão de Autógrafos",
+            "location": "Lisboa",
+            "description": "Encontro com leitores, apresentação do novo livro e sessão de autógrafos."
+        },
+        {
+            "date": "2026-08-02",
+            "displayDate": "02 AGO",
+            "title": "Feira do Livro",
+            "location": "Porto",
+            "description": "Participação na Feira do Livro com sessão de perguntas e respostas."
+        },
+        {
+            "date": "2026-09-18",
+            "displayDate": "18 SET",
+            "title": "Conferência Literária",
+            "location": "Coimbra",
+            "description": "Conversa sobre escrita, criatividade e processo criativo."
+        }
+    ]
+}
