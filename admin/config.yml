@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: aleksssc/NOME_DO_REPOSITORIO
+  repo: aleksssc/cattecoelho
   branch: main
 
 media_folder: "assets/gallery"
