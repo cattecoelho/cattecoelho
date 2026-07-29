@@ -1,37 +1,37 @@
 {
-    "books": [
-        {
-            "visible": true,
-            "title_pt": "Unidos Além da Morte",
-            "title_en": "Bonded Beyond the Veil",
-            "description_pt": "Edição de capa dura disponível apenas em inglês.",
-            "description_en": "Hardcover edition available in English only.",
-            "cover": "assets/img/books/book1.png",
-            "alt_pt": "Capa do livro Unidos Além da Morte",
-            "alt_en": "Bonded Beyond the Veil book cover",
-            "link": "https://www.amazon.es/-/pt/dp/B0G4V6WSR1/"
-        },
-        {
-            "visible": true,
-            "title_pt": "Entre Dois",
-            "title_en": "Entre Dois",
-            "description_pt": "Edição disponível apenas em português.",
-            "description_en": "Available in Portuguese only.",
-            "cover": "assets/img/books/book2.png",
-            "alt_pt": "Capa do livro Entre Dois",
-            "alt_en": "Entre Dois book cover",
-            "link": "https://www.atlanticbooks.pt/entre-dois-uma-escolha-entre-dois-mundos-e-tres-coracoes"
-        },
-        {
-            "visible": true,
-            "title_pt": "Unidos Além da Morte",
-            "title_en": "Bonded Beyond the Veil",
-            "description_pt": "Nova edição disponível em inglês e português.",
-            "description_en": "New-cover edition available in English and Portuguese.",
-            "cover": "assets/img/books/book3.png",
-            "alt_pt": "Nova capa do livro Unidos Além da Morte",
-            "alt_en": "New Bonded Beyond the Veil book cover",
-            "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/"
-        }
-    ]
+  "books": [
+    {
+      "description_pt": "Edição de capa dura disponível apenas em inglês.",
+      "title_pt": "Unidos Além da Morte",
+      "description_en": "Hardcover edition available in English only.",
+      "title_en": "Bonded Beyond the Veil",
+      "visible": true,
+      "cover": "assets/img/books/book1.png",
+      "alt_pt": "Capa do livro Unidos Além da Morte",
+      "link": "https://www.amazon.es/-/pt/dp/B0G4V6WSR1/",
+      "alt_en": "Bonded Beyond the Veil book cover"
+    },
+    {
+      "description_pt": "Edição disponível apenas em português.",
+      "title_pt": "Entre Dois",
+      "description_en": "Available in Portuguese only.",
+      "title_en": "Entre Dois",
+      "visible": true,
+      "cover": "assets/img/books/book2.png",
+      "alt_pt": "Capa do livro Entre Dois",
+      "link": "https://www.atlanticbooks.pt/entre-dois-uma-escolha-entre-dois-mundos-e-tres-coracoes",
+      "alt_en": "Entre Dois book cover"
+    },
+    {
+      "description_pt": "Nova edição disponível em inglês e português.",
+      "title_pt": "Unidos Além da Morte",
+      "description_en": "New-cover edition available in English and Portuguese.",
+      "title_en": "Bonded Beyond the Veil",
+      "visible": true,
+      "cover": "assets/img/books/book3.png",
+      "alt_pt": "Nova capa do livro Unidos Além da Morte",
+      "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
+      "alt_en": "New Bonded Beyond the Veil book cover"
+    }
+  ]
 }
