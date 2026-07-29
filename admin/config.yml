@@ -1,7 +1,9 @@
 backend:
-  name: github
-  repo: aleksssc/cattecoelho
-  branch: main
+  name: test-repo
+  
+  #name: github
+  #repo: aleksssc/cattecoelho
+  #branch: main
 
 media_folder: "assets/gallery"
 public_folder: "/assets/gallery"
