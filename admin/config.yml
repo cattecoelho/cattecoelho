@@ -1,18 +1,12 @@
-local_backend: true
-
 backend:
-  name: git-gateway
+  name: github
+  repo: cattecoelho/cattecoelho
   branch: main
-  
-#backend:
-#  name: github
-#  repo: aleksssc/cattecoelho
-#  branch: main
-#  base_url: https://cattecoelho-oauth.vercel.app
-#  auth_endpoint: auth
-  
+  base_url: https://cattecoelho-oauth.vercel.app
+  auth_endpoint: auth
+
 media_folder: "assets/gallery"
-public_folder: "/assets/gallery"
+public_folder: "assets/gallery"
 
 collections:
 
