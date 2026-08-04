@@ -1,5 +1,8 @@
 {
-    "images": [
-
-    ]
+  "images": [
+    {
+      "image": "assets/gallery/img_2474.jpg.jpeg",
+      "alt": "Teste 1"
+    }
+  ]
 }
