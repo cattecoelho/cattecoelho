@@ -35,16 +35,6 @@
       "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
       "id": "bonded-beyond-the-veil",
       "alt_en": "New Bonded Beyond the Veil book cover"
-    },
-    {
-      "visible": true,
-      "id": "catte-nas-maravilhas",
-      "title_pt": "Catte Nas Maravilhas",
-      "title_en": "Wonder Catte",
-      "description_pt": "teste",
-      "description_en": "test",
-      "cover": "assets/gallery/catte.png",
-      "link": "https://cattecoelho.github.io/cattecoelho/"
     }
   ]
 }
