@@ -1687,36 +1687,15 @@ document.addEventListener("DOMContentLoaded", () => {
             ]);
 
 
-            if (!booksResponse.ok) {
-
-                throw new Error(
-                    `Erro ao carregar livros: ${booksResponse.status}`
-                );
-
-            }
-
-
-            if (!settingsResponse.ok) {
-
-                throw new Error(
-                    `Erro ao carregar definições: ${settingsResponse.status}`
-                );
-
-            }
-
-
             const booksData =
                 await booksResponse.json();
-
 
             const settingsData =
                 await settingsResponse.json();
 
 
             const books =
-                Array.isArray(
-                    booksData.books
-                )
+                Array.isArray(booksData.books)
                     ? booksData.books
                     : [];
 
@@ -1741,9 +1720,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
 
-            renderFeaturedBook(
-                featuredBook
-            );
+            // Chama a função que coloca os dados no HTML
+            renderFeaturedBook(featuredBook);
 
         } catch (error) {
 
@@ -1753,6 +1731,91 @@ document.addEventListener("DOMContentLoaded", () => {
             );
 
         }
+
+    }
+
+    function renderFeaturedBook(book) {
+
+    const cover =
+        document.getElementById(
+            "featured-book-cover"
+        );
+
+    const title =
+        document.getElementById(
+            "featured-book-title"
+        );
+
+    const description =
+        document.getElementById(
+            "featured-book-description"
+        );
+
+    const link =
+        document.getElementById(
+            "featured-book-link"
+        );
+
+
+    if (cover) {
+
+        cover.src =
+            normalizeContentPath(
+                book.cover
+            );
+
+        cover.alt =
+            getBookText(
+                book,
+                "alt"
+            ) ||
+            messages.bookCoverAlt;
+
+    }
+
+
+    if (title) {
+
+        title.textContent =
+            getBookText(
+                book,
+                "title"
+            );
+
+    }
+
+
+    if (description) {
+
+        description.textContent =
+            getBookText(
+                book,
+                "description"
+            );
+
+    }
+
+
+    if (link) {
+
+        link.href =
+            book.link || "#";
+
+
+        if (
+            book.link &&
+            book.link !== "#"
+        ) {
+
+            link.target =
+                "_blank";
+
+            link.rel =
+                "noopener noreferrer";
+
+        }
+
+    }
 
     }
 
