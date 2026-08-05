@@ -1,7 +1,6 @@
 {
   "books": [
     {
-      "id": "unidos-alem-da-morte",
       "description_pt": "Edição de capa dura disponível apenas em inglês.",
       "title_pt": "Unidos Além da Morte",
       "description_en": "Hardcover edition available in English only.",
@@ -10,10 +9,10 @@
       "cover": "assets/img/books/book1.png",
       "alt_pt": "Capa do livro Unidos Além da Morte",
       "link": "https://www.amazon.es/-/pt/dp/B0G4V6WSR1/",
+      "id": "unidos-alem-da-morte",
       "alt_en": "Bonded Beyond the Veil book cover"
     },
     {
-      "id": "entre-dois",
       "description_pt": "Edição disponível apenas em português.",
       "title_pt": "Entre Dois",
       "description_en": "Available in Portuguese only.",
@@ -22,10 +21,10 @@
       "cover": "assets/img/books/book2.png",
       "alt_pt": "Capa do livro Entre Dois",
       "link": "https://www.atlanticbooks.pt/entre-dois-uma-escolha-entre-dois-mundos-e-tres-coracoes",
+      "id": "entre-dois",
       "alt_en": "Entre Dois book cover"
     },
     {
-      "id": "bonded-beyond-the-veil",
       "description_pt": "Nova edição disponível em inglês e português.",
       "title_pt": "Unidos Além da Morte",
       "description_en": "New-cover edition available in English and Portuguese.",
@@ -34,7 +33,18 @@
       "cover": "assets/img/books/book3.png",
       "alt_pt": "Nova capa do livro Unidos Além da Morte",
       "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
+      "id": "bonded-beyond-the-veil",
       "alt_en": "New Bonded Beyond the Veil book cover"
+    },
+    {
+      "visible": true,
+      "id": "catte-nas-maravilhas",
+      "title_pt": "Catte Nas Maravilhas",
+      "title_en": "Wonder Catte",
+      "description_pt": "teste",
+      "description_en": "test",
+      "cover": "assets/gallery/catte.png",
+      "link": "https://cattecoelho.github.io/cattecoelho/"
     }
   ]
 }
