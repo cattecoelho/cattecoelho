@@ -2006,8 +2006,34 @@ footer hr {
         justify-content: center;
     }
 
-    .featured-book-image {
-        max-width: 400px;
+    #featured-book .col-lg-5 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    #featured-book .featured-book-image {
+
+        display: block;
+
+        width: auto;
+        height: auto;
+
+        max-width: 360px;
+        max-height: 520px;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+
+        box-shadow:
+            0 18px 45px rgba(0, 0, 0, 0.18);
+
     }
 
     .newsletter-box {
@@ -2076,6 +2102,11 @@ footer hr {
     .book-content h3,
     .book-content p {
         min-height: auto;
+    }
+
+    #featured-book .featured-book-image {
+        max-width: 280px;
+        max-height: 420px;
     }
 
     .timeline::before {
