@@ -78,6 +78,31 @@ collections:
                 widget: "string"
                 hint: "Cole aqui o endereço completo da Amazon, editora ou loja."
 
+      - label: "Livro em Destaque"
+        name: "homepage"
+        file: "content/settings.json"
+        format: "json"
+
+        fields:
+
+          - label: "Livro em destaque"
+            name: "featured_book"
+            widget: "relation"
+
+            collection: "site_content"
+            file: "books"
+
+            search_fields:
+              - "books.*.title_pt"
+              - "books.*.title_en"
+
+            display_fields:
+              - "books.*.title_pt"
+
+            value_field: "books.*.id"
+
+            hint: "Selecione o livro que será apresentado em destaque na página inicial."
+
       - label: "Eventos"
         name: "events"
         file: "content/events.json"
@@ -138,28 +163,3 @@ collections:
               - label: "Descrição da fotografia"
                 name: "alt"
                 widget: "string"
-
-      - label: "Definições da página inicial"
-        name: "homepage"
-        file: "content/settings.json"
-        format: "json"
-
-        fields:
-
-          - label: "Livro em destaque"
-            name: "featured_book"
-            widget: "relation"
-
-            collection: "site_content"
-            file: "books"
-
-            search_fields:
-              - "books.*.title_pt"
-              - "books.*.title_en"
-
-            display_fields:
-              - "books.*.title_pt"
-
-            value_field: "books.*.id"
-
-            hint: "Selecione o livro que será apresentado em destaque na página inicial."
