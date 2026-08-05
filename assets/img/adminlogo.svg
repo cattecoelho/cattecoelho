@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="105" viewBox="0 0 560 105" role="img" aria-labelledby="title desc">
+    <title id="title">Catte Coelho</title>
+
+    <desc id="desc">
+        Logótipo da área de gestão de conteúdo
+    </desc>
+
+    <text x="280" y="50" text-anchor="middle" fill="#241b19" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="700" letter-spacing="0.4">
+        Catte Coelho
+    </text>
+
+    <line x1="165" y1="65" x2="395" y2="65" stroke="#c7aa96" stroke-width="2"></line>
+
+    <text x="280" y="92" text-anchor="middle" fill="#7b6a61" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="2.6">
+        GESTÃO DE CONTEÚDO
+    </text>
+</svg>
