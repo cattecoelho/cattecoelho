@@ -29,6 +29,11 @@ collections:
 
             fields:
 
+              - name: "id"
+                label: "Identificador"
+                widget: "string"
+                hint: "Exemplo: unidos-alem-da-morte"
+              
               - name: "visible"
                 label: "Mostrar no site"
                 widget: "boolean"
@@ -129,3 +134,28 @@ collections:
               - label: "Descrição da fotografia"
                 name: "alt"
                 widget: "string"
+
+      - label: "Definições da página inicial"
+        name: "homepage"
+        file: "content/settings.json"
+        format: "json"
+
+        fields:
+
+          - label: "Livro em destaque"
+            name: "featured_book"
+            widget: "relation"
+
+            collection: "site_content"
+            file: "books"
+
+            search_fields:
+              - "books.*.title_pt"
+              - "books.*.title_en"
+
+            display_fields:
+              - "books.*.title_pt"
+
+            value_field: "books.*.id"
+
+            hint: "Selecione o livro que será apresentado em destaque na página inicial."

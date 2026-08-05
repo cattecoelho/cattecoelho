@@ -1,6 +1,7 @@
 {
   "books": [
     {
+      "id": "unidos-alem-da-morte",
       "description_pt": "Edição de capa dura disponível apenas em inglês.",
       "title_pt": "Unidos Além da Morte",
       "description_en": "Hardcover edition available in English only.",
@@ -12,6 +13,7 @@
       "alt_en": "Bonded Beyond the Veil book cover"
     },
     {
+      "id": "entre-dois",
       "description_pt": "Edição disponível apenas em português.",
       "title_pt": "Entre Dois",
       "description_en": "Available in Portuguese only.",
@@ -23,6 +25,7 @@
       "alt_en": "Entre Dois book cover"
     },
     {
+      "id": "bonded-beyond-the-veil",
       "description_pt": "Nova edição disponível em inglês e português.",
       "title_pt": "Unidos Além da Morte",
       "description_en": "New-cover edition available in English and Portuguese.",

@@ -1660,6 +1660,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    //Feature Book
+    async function loadFeaturedBook() {
+
+        try {
+
+            const [
+                booksResponse,
+                settingsResponse
+            ] = await Promise.all([
+
+                fetch(
+                    "./content/books.json",
+                    {
+                        cache: "no-store"
+                    }
+                ),
+
+                fetch(
+                    "./content/settings.json",
+                    {
+                        cache: "no-store"
+                    }
+                )
+
+            ]);
+
+
+            if (!booksResponse.ok) {
+
+                throw new Error(
+                    `Erro ao carregar livros: ${booksResponse.status}`
+                );
+
+            }
+
+
+            if (!settingsResponse.ok) {
+
+                throw new Error(
+                    `Erro ao carregar definições: ${settingsResponse.status}`
+                );
+
+            }
+
+
+            const booksData =
+                await booksResponse.json();
+
+
+            const settingsData =
+                await settingsResponse.json();
+
+
+            const books =
+                Array.isArray(
+                    booksData.books
+                )
+                    ? booksData.books
+                    : [];
+
+
+            const featuredBook =
+                books.find(
+                    book =>
+                        book.id ===
+                            settingsData.featured_book &&
+                        book.visible !== false
+                );
+
+
+            if (!featuredBook) {
+
+                console.warn(
+                    "O livro em destaque não foi encontrado."
+                );
+
+                return;
+
+            }
+
+
+            renderFeaturedBook(
+                featuredBook
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Erro ao carregar o livro em destaque:",
+                error
+            );
+
+        }
+
+    }
 
     /*==============================================
             DYNAMIC BOOK HOVER EFFECT
@@ -1991,6 +2086,8 @@ document.addEventListener("DOMContentLoaded", () => {
         Promise.allSettled([
 
             loadBooks(),
+
+            loadFeaturedBook(),
 
             loadEvents(),
 
