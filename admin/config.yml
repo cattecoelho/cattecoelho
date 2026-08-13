@@ -78,6 +78,16 @@ collections:
                 widget: "string"
                 hint: "Cole aqui o endereço completo da Amazon, editora ou loja."
 
+              - name: "excerpt_pt"
+                label: "excert_pt"
+                widget: "string"
+                hint: "Cola aqui o excerto do livro em português"
+
+              - name: "excerpt_en"
+                label: "excert_en"
+                widget: "string"
+                hint: "Cola aqui o excerto do livro em inglês"
+
       - label: "Livro em Destaque"
         name: "homepage"
         file: "content/settings.json"
@@ -122,6 +132,11 @@ collections:
                 widget: "string"
                 hint: "Exemplo: 14 JUL"
 
+              - label: "Data apresentada EN"
+                name: "displayDate_en"
+                widget: "string"
+                hint: "Exemplo: 14 JUL"
+
               - label: "Data do evento"
                 name: "date"
                 widget: "datetime"
@@ -129,18 +144,29 @@ collections:
                 time_format: false
                 format: "YYYY-MM-DD"
 
-              - label: "Título"
+              - label: "Título PT"
                 name: "title"
                 widget: "string"
 
-              - label: "Local"
+              - label: "Título EN"
+                name: "title_en"
+                widget: "string"
+
+              - label: "Local PT"
                 name: "location"
                 widget: "string"
 
-              - label: "Descrição"
+              - label: "Local EN"
+                name: "location_en"
+                widget: "string"
+
+              - label: "Descrição PT"
                 name: "description"
                 widget: "text"
 
+              - label: "Descrição EN"
+                name: "description_en"
+                widget: "text"
 
       - label: "Galeria"
         name: "gallery"

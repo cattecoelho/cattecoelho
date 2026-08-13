@@ -10,7 +10,9 @@
       "alt_pt": "Capa do livro Unidos Além da Morte",
       "link": "https://www.amazon.es/-/pt/dp/B0G4V6WSR1/",
       "id": "unidos-alem-da-morte",
-      "alt_en": "Bonded Beyond the Veil book cover"
+      "alt_en": "Bonded Beyond the Veil book cover",
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
     },
     {
       "description_pt": "Edição disponível apenas em português.",
@@ -22,7 +24,9 @@
       "alt_pt": "Capa do livro Entre Dois",
       "link": "https://www.atlanticbooks.pt/entre-dois-uma-escolha-entre-dois-mundos-e-tres-coracoes",
       "id": "entre-dois",
-      "alt_en": "Entre Dois book cover"
+      "alt_en": "Entre Dois book cover",
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
     },
     {
       "description_pt": "Nova edição disponível em inglês e português.",
@@ -34,7 +38,9 @@
       "alt_pt": "Nova capa do livro Unidos Além da Morte",
       "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
       "id": "bonded-beyond-the-veil",
-      "alt_en": "New Bonded Beyond the Veil book cover"
+      "alt_en": "New Bonded Beyond the Veil book cover",
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
     }
   ]
 }

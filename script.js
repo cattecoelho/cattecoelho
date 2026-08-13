@@ -930,9 +930,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 await response.json();
 
 
+            const today =
+                new Date();
+
+            today.setHours(
+                0,
+                0,
+                0,
+                0
+            );
+
+            // Oculta eventos antigos
+
             const events =
                 Array.isArray(data.events)
-                    ? [...data.events]
+
+                    ? data.events.filter(event => {
+
+                        const eventDate =
+                            parseEventDate(
+                                event.date
+                            );
+
+
+                        return (
+                            eventDate >=
+                            today.getTime()
+                        );
+
+                    })
+
                     : [];
 
 
@@ -1024,7 +1051,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         eventData.date,
 
-                        eventData.displayDate
+                        isEnglish
+                            ? eventData.displayDate_en
+                            : eventData.displayDate
 
                     );
 
@@ -1046,7 +1075,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 title.textContent =
-                    eventData.title || "";
+                    isEnglish
+                        ? eventData.title_en || eventData.title || ""
+                        : eventData.title || "";
 
 
                 const location =
@@ -1056,7 +1087,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 location.textContent =
-                    eventData.location || "";
+                    isEnglish
+                        ? eventData.location_en || eventData.location || ""
+                        : eventData.location || "";
 
 
                 const description =
@@ -1066,7 +1099,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 description.textContent =
-                    eventData.description || "";
+                    isEnglish
+                        ? eventData.description_en || eventData.description || ""
+                        : eventData.description || "";
 
 
                 content.append(
@@ -1756,6 +1791,10 @@ document.addEventListener("DOMContentLoaded", () => {
             "featured-book-link"
         );
 
+    const excerptButton =
+        document.getElementById(
+            "featured-book-excerpt"
+        );
 
     if (cover) {
 
@@ -1817,7 +1856,193 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
+    if (excerptButton) {
+
+        const excerpt =
+            getBookText(
+                book,
+                "excerpt"
+            );
+
+
+        if (excerpt) {
+
+            excerptButton.style.display = "";
+
+
+            excerptButton.onclick =
+                event => {
+
+                    event.preventDefault();
+
+                    openBookExcerpt(
+                        book
+                    );
+
+                };
+
+        } else {
+
+            /*
+                Se o livro não tiver excerto,
+                o botão não aparece.
+            */
+
+            excerptButton.style.display =
+                "none";
+
+        }
+
     }
+
+    }
+
+    /*==============================================
+                BOOK EXCERPT MODAL
+    ==============================================*/
+
+    function openBookExcerpt(book) {
+
+        const modal =
+            document.getElementById(
+                "excerpt-modal"
+            );
+
+        const title =
+            document.getElementById(
+                "excerpt-modal-title"
+            );
+
+        const text =
+            document.getElementById(
+                "excerpt-modal-text"
+            );
+
+
+        if (
+            !modal ||
+            !title ||
+            !text
+        ) {
+
+            return;
+
+        }
+
+
+        title.textContent =
+            getBookText(
+                book,
+                "title"
+            );
+
+
+        text.textContent =
+            getBookText(
+                book,
+                "excerpt"
+            );
+
+
+        modal.classList.add(
+            "active"
+        );
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    function closeBookExcerpt() {
+
+        const modal =
+            document.getElementById(
+                "excerpt-modal"
+            );
+
+
+        if (!modal) {
+
+            return;
+
+        }
+
+
+        modal.classList.remove(
+            "active"
+        );
+
+
+        modal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+    const excerptModal =
+    document.getElementById(
+        "excerpt-modal"
+    );
+
+    const excerptClose =
+        document.querySelector(
+            ".excerpt-modal-close"
+        );
+
+
+    excerptClose?.addEventListener(
+        "click",
+        closeBookExcerpt
+    );
+
+
+    excerptModal?.addEventListener(
+        "click",
+        event => {
+
+            if (
+                event.target ===
+                excerptModal
+            ) {
+
+                closeBookExcerpt();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Escape" &&
+                excerptModal?.classList.contains(
+                    "active"
+                )
+            ) {
+
+                closeBookExcerpt();
+
+            }
+
+        }
+    );
 
     /*==============================================
             DYNAMIC BOOK HOVER EFFECT
@@ -1885,7 +2110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
     
-        /*==============================================
+    /*==============================================
                 DYNAMIC GALLERY
     ==============================================*/
 
