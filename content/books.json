@@ -35,6 +35,16 @@
       "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
       "id": "bonded-beyond-the-veil",
       "alt_en": "New Bonded Beyond the Veil book cover"
+    },
+    {
+      "visible": true,
+      "id": "isto-e-um-teste",
+      "title_pt": "Teste",
+      "title_en": "Test",
+      "description_pt": "Isto é um teste",
+      "description_en": "This is a test",
+      "cover": "assets/gallery/img_2474.jpg.jpeg",
+      "link": "https://github.com/cattecoelho/cattecoelho"
     }
   ]
 }
