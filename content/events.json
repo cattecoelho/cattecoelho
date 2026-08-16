@@ -1,3 +1,26 @@
 {
-  "events": []
+  "events": [
+    {
+      "description_en": "Literary picnic at the Porto Book Fair with Cláudia, Mariana, and their book club - Confessionário. Join us at the Palácio de Cristal Gardens for an afternoon surrounded by books and fellow readers. 🧺📚 Time: 2:30 PM.",
+      "date": "2026-08-29",
+      "displayDate": "29 AGO",
+      "title_en": "Literary Picnic – Porto Book Fair",
+      "location_en": "Jardins do Palácio de Cristal, Porto",
+      "location": "Jardins do Palácio de Cristal, Porto",
+      "title": "Picnic literário - Feira do Livro do Porto ",
+      "displayDate_en": "AGO 29",
+      "description": "Piquenique literário na Feira do Livro do Porto, com Cláudia, Mariana e o Clube do Livro do Confessionário. Junta-te a nós nos Jardins do Palácio de Cristal para uma tarde entre livros e leitores. 🧺📚 Horário: 14h30."
+    },
+    {
+      "description_en": "Special presentation of Unidos Além da Morte, featuring a conversation with Sara Dias, founder of the Sinful & Sweet Book Club, and literary content creator Vanessa Bastos. Together, they’ll talk about the book, the power of reading, and how stories can change lives, spark unexpected friendships, and bring readers together to build lasting communities. The conversation will be followed by a book signing.",
+      "date": "2026-09-02",
+      "displayDate": "02 SET",
+      "title_en": "Book Club with Euforia – Feira da Luz",
+      "location_en": "CARNIDE, LISBOA",
+      "location": "CARNIDE, LISBOA",
+      "title": "Clube do Livro com a Editora Euforia – Feira da Luz de Lisboa",
+      "displayDate_en": "SET 2",
+      "description": "Apresentação do livro Unidos Além da Morte, de Catte Coelho, numa conversa com Sara Dias, fundadora do clube literário Sinful & Sweet, e Vanessa Bastos, criadora de conteúdo literário, sobre o livro, o poder da leitura e a forma como as histórias podem transformar vidas, criar amizades e dar origem a comunidades de leitores. O evento será seguido de uma sessão de autógrafos. \nHorário: 18h às 21h."
+    }
+  ]
 }
