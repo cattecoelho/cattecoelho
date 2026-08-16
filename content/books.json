@@ -1,46 +1,60 @@
 {
   "books": [
     {
-      "description_pt": "Edição de capa dura disponível apenas em inglês.",
-      "title_pt": "Unidos Além da Morte",
-      "description_en": "Hardcover edition available in English only.",
-      "title_en": "Bonded Beyond the Veil",
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt...",
+      "description_pt": "Edição de coleccionador disponível apenas em inglês.",
+      "title_pt": "Bonded Beyond the Veil: Collector's edition",
+      "description_en": "Collector's edition available in English only.",
+      "title_en": "Bonded Beyond the Veil: Collector's edition",
       "visible": true,
       "cover": "assets/img/books/book1.png",
       "alt_pt": "Capa do livro Unidos Além da Morte",
-      "link": "https://www.amazon.es/-/pt/dp/B0G4V6WSR1/",
+      "link": "https://a.co/d/01VxxzuC",
       "id": "unidos-alem-da-morte",
-      "alt_en": "Bonded Beyond the Veil book cover",
-      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
-      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
+      "alt_en": "Bonded Beyond the Veil book cover"
     },
     {
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt...",
       "description_pt": "Edição disponível apenas em português.",
       "title_pt": "Entre Dois",
       "description_en": "Available in Portuguese only.",
-      "title_en": "Between Us",
+      "title_en": "Entre Dois",
       "visible": true,
       "cover": "assets/img/books/book2.png",
       "alt_pt": "Capa do livro Entre Dois",
       "link": "https://www.atlanticbooks.pt/entre-dois-uma-escolha-entre-dois-mundos-e-tres-coracoes",
       "id": "entre-dois",
-      "alt_en": "Entre Dois book cover",
-      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
-      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
+      "alt_en": "Entre Dois book cover"
     },
     {
-      "description_pt": "Nova edição disponível em inglês e português.",
-      "title_pt": "Unidos Além da Morte",
-      "description_en": "New-cover edition available in English and Portuguese.",
-      "title_en": "Bonded Beyond the Veil",
+      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
+      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt...",
+      "description_pt": "Primeira edição, em Inglês",
+      "title_pt": "Bonded Beyond the veil Paperback",
+      "description_en": "First Edition, english",
+      "title_en": "Bonded Beyond the Veil Paperback",
       "visible": true,
       "cover": "assets/img/books/book3.png",
-      "alt_pt": "Nova capa do livro Unidos Além da Morte",
-      "link": "https://www.amazon.es/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800/",
+      "alt_pt": "Bonded Beyond the Veil book Cover",
+      "link": "https://www.amazon.com/Bonded-Beyond-Veil-Catte-Coelho/dp/9893381800",
       "id": "bonded-beyond-the-veil",
-      "alt_en": "New Bonded Beyond the Veil book cover",
-      "excerpt_pt": "Este é o início do excerto do livro...\n\nSegundo parágrafo do excerto...",
-      "excerpt_en": "This is the beginning of the book excerpt...\n\nSecond paragraph of the excerpt..."
+      "alt_en": " Bonded Beyond the Veil book cover"
+    },
+    {
+      "excerpt_pt": "Este é o início do excerto do livro...Segundo parágrafo do excerto...",
+      "excerpt_en": "Este é o início do excerto do livro...Segundo parágrafo do excerto...",
+      "description_pt": "Bonded Beyond the Veil em português, edição Euforia",
+      "title_pt": "Unidos além da morte",
+      "description_en": "Bonded Beyond the veil in portuguese, Euforia Edition",
+      "title_en": "Unidos além da morte",
+      "visible": true,
+      "cover": "assets/gallery/captura-de-ecrã-2026-08-17-005114.png",
+      "alt_pt": "Capa Portuguesa Unidos além da morte",
+      "link": "https://www.wook.pt/livro/unidos-alem-da-morte-catte-coelho/33282261?srsltid=AfmBOoqHDLfFswiAjSHkOk-VyhIzmAhs1kH0XUlONj3GUufl5NqxfgG0",
+      "id": "unidos-alem-da-morte-pt",
+      "alt_en": "Portuguese Cover Bonded Beyond the Veil "
     }
   ]
 }
