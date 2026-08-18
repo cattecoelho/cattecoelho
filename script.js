@@ -662,8 +662,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-            /*==============================================
-                NEWSLETTER
+    /*==============================================
+                    NEWSLETTER
     ==============================================*/
 
     const newsletter =
@@ -676,11 +676,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         newsletter.addEventListener(
             "submit",
-            function (event) {
+            async function (event) {
+
+                event.preventDefault();
+
 
                 const email =
                     this.querySelector(
-                        'input[type="email"]'
+                        '[name="EMAIL"]'
+                    );
+
+
+                const button =
+                    this.querySelector(
+                        'button[type="submit"]'
+                    );
+
+
+                const status =
+                    document.getElementById(
+                        "newsletter-status"
                     );
 
 
@@ -695,65 +710,167 @@ document.addEventListener("DOMContentLoaded", () => {
                     )
                 ) {
 
-                    event.preventDefault();
+                    if (status) {
+
+                        status.textContent =
+                            isEnglish
+                                ? "Please enter a valid email address."
+                                : "Introduza um endereço de email válido.";
 
 
-                    alert(
-                        messages.invalidEmail
-                    );
+                        status.className =
+                            "newsletter-status error";
+
+                    }
 
 
                     email?.focus();
 
-
                     return;
 
                 }
 
 
-                const action =
-                    this.getAttribute(
-                        "action"
-                    );
+                const originalButtonText =
+                    button?.textContent;
 
 
-                const hasNewsletterService =
+                if (button) {
 
-                    action &&
+                    button.disabled = true;
 
-                    action.trim() !== "" &&
+                    button.textContent =
+                        isEnglish
+                            ? "Subscribing..."
+                            : "A subscrever...";
 
-                    action.trim() !== "#" &&
+                }
 
-                    !action
-                        .trim()
-                        .toLowerCase()
-                        .startsWith(
-                            "javascript:"
+
+                if (status) {
+
+                    status.textContent = "";
+
+                    status.className =
+                        "newsletter-status";
+
+                }
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            this.action,
+                            {
+
+                                method: "POST",
+
+                                body:
+                                    new FormData(this),
+
+                                headers: {
+
+                                    Accept:
+                                        "application/json"
+
+                                }
+
+                            }
                         );
 
 
-                /*
-                    Se existir um action do Brevo,
-                    Mailchimp ou outro serviço,
-                    o formulário é enviado normalmente.
-                */
+                    const responseText =
+                        await response.text();
 
-                if (
-                    hasNewsletterService
-                ) {
 
-                    return;
+                    let data = {};
+
+
+                    try {
+
+                        data =
+                            JSON.parse(
+                                responseText
+                            );
+
+                    } catch {
+
+                        data = {};
+
+                    }
+
+
+                    /*
+                        A Brevo devolve:
+                        {
+                            success: true,
+                            message: "..."
+                        }
+                    */
+
+                    if (
+                        !response.ok ||
+                        data.success !== true
+                    ) {
+
+                        throw new Error(
+                            data.message ||
+                            "Subscription failed"
+                        );
+
+                    }
+
+
+                    if (status) {
+
+                        status.textContent =
+                            isEnglish
+                                ? "Thank you! You have successfully subscribed."
+                                : "Obrigado! A subscrição foi efetuada com sucesso.";
+
+
+                        status.className =
+                            "newsletter-status success";
+
+                    }
+
+
+                    this.reset();
+
+                } catch (error) {
+
+                    console.error(
+                        "Erro na newsletter:",
+                        error
+                    );
+
+
+                    if (status) {
+
+                        status.textContent =
+                            isEnglish
+                                ? "The subscription could not be completed. Please try again."
+                                : "Não foi possível efetuar a subscrição. Tente novamente.";
+
+
+                        status.className =
+                            "newsletter-status error";
+
+                    }
+
+                } finally {
+
+                    if (button) {
+
+                        button.disabled = false;
+
+                        button.textContent =
+                            originalButtonText;
+
+                    }
 
                 }
-
-
-                event.preventDefault();
-
-
-                alert(
-                    messages.newsletterNotConnected
-                );
 
             }
         );

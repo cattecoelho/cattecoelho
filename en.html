@@ -510,14 +510,46 @@
 
                     </div>
 
-                    <div class="col-lg-6">
+        <div class="col-lg-6">
 
-                        <form class="newsletter-form">
+            <div class="sib-form newsletter-brevo">
+
+                <div
+                    id="sib-form-container"
+                    class="sib-form-container"
+                >
+
+                    <div id="sib-container">
+
+                        <form
+                            class="newsletter-form"
+                            method="POST"
+                            action="https://c072adff.sibforms.com/serve/MUIFAON2bT6XGPhOSq0mQvJHgu_1XbYvhXlRoRqZZgPnHhGe2Iot8f2fQFbM_DxViOXImRnETfuNtUlPFVHcOPPyRTaNjcY_ngq8C-MKDA5Nx9K72npoTfyevq6G687zXDn8g67cCcG37LoJ44AIJZ--NxzZxlxkcQxcfhgaes1yri1QqEKXULvjzAndLs9wqOausI01v-0NDbb9Cw=="
+                        >
 
                             <input
                                 type="email"
+                                id="EMAIL"
+                                name="EMAIL"
                                 class="form-control"
                                 placeholder="Your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                            <input
+                                type="text"
+                                name="email_address_check"
+                                value=""
+                                class="newsletter-honeypot"
+                                tabindex="-1"
+                                autocomplete="off"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="locale"
+                                value="pt"
                             >
 
                             <button
@@ -528,6 +560,12 @@
                             </button>
 
                         </form>
+
+                        <p
+                            id="newsletter-status"
+                            class="newsletter-status"
+                            aria-live="polite"
+                        ></p>
 
                     </div>
 
