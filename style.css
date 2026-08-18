@@ -548,7 +548,8 @@ strong {
 #hero {
     min-height: 100vh;
     min-height: 100svh;
-    padding: 150px 0 100px;
+
+    padding: 110px 0 80px;
 
     display: flex;
     align-items: center;
