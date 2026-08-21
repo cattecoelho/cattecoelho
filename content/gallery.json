@@ -1,12 +1,36 @@
 {
   "images": [
     {
-      "image": "assets/gallery/img_2474.jpg.jpeg",
-      "alt": "Teste 1"
+      "image": "assets/gallery/58f43bba-564e-4cea-9f8a-e455db2ef71f.jpeg",
+      "alt": "Aveiro 💜"
     },
     {
-      "image": "assets/gallery/img_4253.jpg.jpeg",
-      "alt": "Feira do Livro"
+      "image": "assets/gallery/img_1336.jpeg",
+      "alt": "Feira do Livro de Lisboa "
+    },
+    {
+      "image": "assets/gallery/1ca5f2ee-034a-456f-bf3f-4b392fbc6076.jpeg",
+      "alt": "Leiria 💜"
+    },
+    {
+      "image": "assets/gallery/7cbeb2d2-5924-479d-b2fd-dbb7cc34bbf9.jpeg",
+      "alt": "FLL 💜"
+    },
+    {
+      "image": "assets/gallery/img_6126.jpeg",
+      "alt": "Unidos + Cosmos "
+    },
+    {
+      "image": "assets/gallery/img_3886.jpeg",
+      "alt": "Lisboa 💜"
+    },
+    {
+      "image": "assets/gallery/ecba15f9-1583-4cfd-87d5-c86f9d1c66ae.jpeg",
+      "alt": "Apresentação FNAC Colombo "
+    },
+    {
+      "image": "assets/gallery/37f41ca9-4911-40b9-b33f-0aeb87f058fa.jpeg",
+      "alt": "Fnac Lisboa "
     }
   ]
 }
